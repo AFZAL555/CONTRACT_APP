@@ -159,10 +159,9 @@ const PostConfirm=() =>
           try {
             setLoading(true);
             const url="http://localhost:8080/api/users/postdelete";
-            const {data: res}=await axios.delete(
+            const {data: res}=await axios.post(
               url,
-              {post},
-              {headers: {Authorization: USERTOKEN}}
+              {post}
             );
             setLoading(false);
           } catch(error) {
