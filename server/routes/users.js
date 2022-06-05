@@ -64,7 +64,7 @@ router.put("/bidagree", PostControllers.bidagree);
 router.put("/bidcancel", PostControllers.CancelBid);
 
 /*POST deletion  of a perticular post */
-router.delete("/postdelete", PostControllers.deletePost);
+router.post("/postdelete", PostControllers.deletePost);
 
 /*GET contract history of a perticular user */
 router.get("/contracthistory/:id", userControllers.contracthistory);
